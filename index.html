@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tutoriais do RCO Dash</title>
-<meta name="description" content="Veja o RCO Dash funcionando: 9 vídeos curtos sobre o Davi, a Research, o curso e as ferramentas da plataforma.">
+<meta name="description" content="Aprenda a usar o RCO Dash: 8 tutoriais em vídeo, de 4 a 7 minutos, com cada ferramenta na prática.">
 <meta property="og:title" content="Tutoriais do RCO Dash">
-<meta property="og:description" content="9 vídeos curtos, menos de 1 minuto cada. Veja a plataforma funcionando.">
-<meta property="og:image" content="https://jimmycarvalho.github.io/rco-dash-tutoriais/posters/01-uma-tela.jpg">
+<meta property="og:description" content="8 tutoriais em vídeo: B3, Davi, carteira, recomendações, grade de opções e como levar a ordem para a corretora.">
+<meta property="og:image" content="https://jimmycarvalho.github.io/rco-dash-tutoriais/capas/rco-na-pratica-01.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
 :root { --bg:#05070a; --panel:#0f131b; --line:rgba(255,255,255,.08); --fg:#f2f4f7; --fg-2:#c2c8d4; --dim:#8a92a3;
-  --blue:#4b7bff; --blue-2:#9db8ff; --green:#2bd47d; --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif; color-scheme: dark; }
+  --blue:#4b7bff; --blue-2:#9db8ff; --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif; color-scheme: dark; }
 * { box-sizing:border-box; }
 body { margin:0; background:radial-gradient(ellipse 90% 40% at 50% -8%, rgba(75,123,255,.22), transparent 70%), var(--bg); color:var(--fg);
   font-family:var(--sans); font-size:16px; line-height:1.5; -webkit-font-smoothing:antialiased; }
@@ -25,16 +25,21 @@ h1 { margin:6px 0 0; font:800 clamp(34px,6vw,56px)/1.03 var(--sans); letter-spac
 .lead { margin:0; color:var(--fg-2); font-size:clamp(17px,2.2vw,20px); }
 .meta { margin:0; color:var(--dim); font-size:15px; }
 .grp { display:flex; flex-direction:column; gap:18px; }
-.grp header { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px; padding-bottom:10px; border-bottom:1px solid var(--line); }
-.grp h2 { margin:0; font:700 24px/1.2 var(--sans); letter-spacing:-.02em; }
+.grp header { display:flex; flex-direction:column; gap:2px; padding-bottom:10px; border-bottom:1px solid var(--line); }
+.grp h2 { margin:0; font:700 26px/1.2 var(--sans); letter-spacing:-.02em; }
 .sub { margin:0; color:var(--dim); font-size:15px; }
-.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr)); gap:18px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr)); gap:20px; }
+.grid.small { grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr)); gap:14px; }
 .card { display:flex; flex-direction:column; border-radius:16px; overflow:hidden; background:var(--panel); border:1px solid var(--line); }
 .card video { display:block; width:100%; aspect-ratio:16/9; background:#000; }
 .info { padding:14px 16px 18px; display:flex; flex-direction:column; gap:6px; }
-.info h3 { margin:0; font:700 18px/1.25 var(--sans); letter-spacing:-.01em; }
+.info h3 { margin:0; font:700 20px/1.25 var(--sans); letter-spacing:-.015em; }
+.mini .info { padding:10px 12px 14px; }
+.mini .info h3 { font-size:16px; }
 .info p { margin:0; color:var(--fg-2); font-size:15px; }
-.info .dur { align-self:flex-start; padding:2px 8px; border-radius:7px; background:rgba(75,123,255,.16); color:var(--blue-2); font:600 13px/1.5 var(--sans); font-variant-numeric:tabular-nums; }
+.row { display:flex; align-items:center; gap:8px; }
+.n { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--blue); color:#fff; font:700 13px/1 var(--sans); }
+.dur { padding:2px 8px; border-radius:7px; background:rgba(75,123,255,.16); color:var(--blue-2); font:600 13px/1.5 var(--sans); font-variant-numeric:tabular-nums; }
 .cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; padding:24px; border-radius:18px;
   background:linear-gradient(135deg, rgba(75,123,255,.20), rgba(75,123,255,.06)); border:1px solid rgba(157,184,255,.3); }
 .cta p { margin:0; font:700 22px/1.25 var(--sans); letter-spacing:-.02em; }
@@ -48,112 +53,141 @@ h1 { margin:6px 0 0; font:800 clamp(34px,6vw,56px)/1.03 var(--sans); letter-spac
 <main class="wrap">
   <header class="top">
     <p class="logo"><b>RCO</b> Dash</p>
-    <h1>Veja o RCO Dash funcionando.</h1>
-    <p class="lead">Vídeos curtos, de menos de um minuto, mostrando o Davi, a Research, o curso e as ferramentas da plataforma. Escolha pelo seu perfil.</p>
-    <p class="meta">9 vídeos · cerca de 5 minutos no total · com narração, ligue o som</p>
+    <h1>Aprenda a usar o RCO Dash.</h1>
+    <p class="lead">Tutoriais em vídeo, de 4 a 7 minutos, mostrando cada ferramenta na prática. Assista na ordem ou vá direto ao que você precisa.</p>
+    <p class="meta">8 tutoriais · cerca de 39 minutos · com legenda na tela</p>
   </header>
-    <section class="grp">
-      <header><h2>Comece por aqui</h2><p class="sub">O RCO Dash em menos de um minuto.</p></header>
-      <div class="grid">
+  <section class="grp">
+    <header><h2>RCO na prática</h2><p class="sub">Do primeiro acesso até a ordem na sua corretora.</p></header>
+    <div class="grid">
       <article class="card">
+        <video controls playsinline preload="none" poster="capas/rco-na-pratica-01.jpg" aria-label="Tour pela plataforma">
+          <source src="tutoriais/rco-na-pratica-01.mp4" type="video/mp4">
+        </video>
+        <div class="info">
+          <p class="row"><span class="n">1</span><span class="dur">7:03</span></p>
+          <h3>Tour pela plataforma</h3>
+          <p>Onde está cada coisa, da sua carteira até uma operação montada, no caminho de um dia normal.</p>
+        </div>
+      </article>
+      <article class="card">
+        <video controls playsinline preload="none" poster="capas/rco-na-pratica-02.jpg" aria-label="Conectar a sua B3">
+          <source src="tutoriais/rco-na-pratica-02.mp4" type="video/mp4">
+        </video>
+        <div class="info">
+          <p class="row"><span class="n">2</span><span class="dur">4:34</span></p>
+          <h3>Conectar a sua B3</h3>
+          <p>A carteira inteira aparece sozinha: ações, opções e preço médio, atualizados todo dia, sem digitar nada.</p>
+        </div>
+      </article>
+      <article class="card">
+        <video controls playsinline preload="none" poster="capas/rco-na-pratica-03.jpg" aria-label="Conversando com o Davi">
+          <source src="tutoriais/rco-na-pratica-03.mp4" type="video/mp4">
+        </video>
+        <div class="info">
+          <p class="row"><span class="n">3</span><span class="dur">4:31</span></p>
+          <h3>Conversando com o Davi</h3>
+          <p>Como perguntar ao Davi, a IA do RCO Dash, e como ler cada resposta que ele dá.</p>
+        </div>
+      </article>
+      <article class="card">
+        <video controls playsinline preload="none" poster="capas/rco-na-pratica-04.jpg" aria-label="A sua carteira em um minuto">
+          <source src="tutoriais/rco-na-pratica-04.mp4" type="video/mp4">
+        </video>
+        <div class="info">
+          <p class="row"><span class="n">4</span><span class="dur">4:34</span></p>
+          <h3>A sua carteira em um minuto</h3>
+          <p>Quanto ela rendeu hoje, o que moveu o dia e onde está cada real.</p>
+        </div>
+      </article>
+      <article class="card">
+        <video controls playsinline preload="none" poster="capas/rco-na-pratica-06.jpg" aria-label="O que precisa de você">
+          <source src="tutoriais/rco-na-pratica-06.mp4" type="video/mp4">
+        </video>
+        <div class="info">
+          <p class="row"><span class="n">5</span><span class="dur">4:48</span></p>
+          <h3>O que precisa de você</h3>
+          <p>O painel que junta o que espera uma decisão sua e mostra por onde começar.</p>
+        </div>
+      </article>
+      <article class="card">
+        <video controls playsinline preload="none" poster="capas/rco-na-pratica-25.jpg" aria-label="Como ler uma recomendação">
+          <source src="tutoriais/rco-na-pratica-25.mp4" type="video/mp4">
+        </video>
+        <div class="info">
+          <p class="row"><span class="n">6</span><span class="dur">4:41</span></p>
+          <h3>Como ler uma recomendação</h3>
+          <p>Preço-teto, régua de preço e o “Se der certo”: uma recomendação da Research de ponta a ponta.</p>
+        </div>
+      </article>
+      <article class="card">
+        <video controls playsinline preload="none" poster="capas/rco-na-pratica-13.jpg" aria-label="A grade de opções">
+          <source src="tutoriais/rco-na-pratica-13.mp4" type="video/mp4">
+        </video>
+        <div class="info">
+          <p class="row"><span class="n">7</span><span class="dur">4:38</span></p>
+          <h3>A grade de opções</h3>
+          <p>Leia qualquer linha da grade: que opção é e quanto ela custa de verdade.</p>
+        </div>
+      </article>
+      <article class="card">
+        <video controls playsinline preload="none" poster="capas/rco-na-pratica-10.jpg" aria-label="Da plataforma para a corretora">
+          <source src="tutoriais/rco-na-pratica-10.mp4" type="video/mp4">
+        </video>
+        <div class="info">
+          <p class="row"><span class="n">8</span><span class="dur">4:34</span></p>
+          <h3>Da plataforma para a corretora</h3>
+          <p>Copiar parâmetros e enviar a ordem na sua corretora, de primeira.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="grp">
+    <header><h2>Versões de 30 segundos</h2><p class="sub">Para ver rápido o que a plataforma faz.</p></header>
+    <div class="grid small">
+      <article class="card mini">
         <video controls playsinline preload="none" poster="posters/01-uma-tela.jpg" src="videos/01-uma-tela.mp4" aria-label="Tudo num lugar só"></video>
-        <div class="info">
-          <p class="dur">0:38</p>
-          <h3>Tudo num lugar só</h3>
-          <p>Davi, carteira, Research, mercado e curso na mesma plataforma.</p>
-        </div>
+        <div class="info"><p class="row"><span class="dur">0:38</span></p><h3>Tudo num lugar só</h3></div>
       </article>
-      </div>
-    </section>
-    <section class="grp">
-      <header><h2>Para aprender do zero</h2><p class="sub">Nunca operou opções? Comece aqui.</p></header>
-      <div class="grid">
-      <article class="card">
+      <article class="card mini">
         <video controls playsinline preload="none" poster="posters/02-curso.jpg" src="videos/02-curso.mp4" aria-label="O curso, do zero ao avançado"></video>
-        <div class="info">
-          <p class="dur">0:37</p>
-          <h3>O curso, do zero ao avançado</h3>
-          <p>O curso Renda com Opções, com mais de 12 mil alunos, agora dentro da plataforma, com o Davi ao lado da aula.</p>
-        </div>
+        <div class="info"><p class="row"><span class="dur">0:37</span></p><h3>O curso, do zero ao avançado</h3></div>
       </article>
-      <article class="card">
+      <article class="card mini">
         <video controls playsinline preload="none" poster="posters/03-davi-explica.jpg" src="videos/03-davi-explica.mp4" aria-label="Pergunte ao Davi"></video>
-        <div class="info">
-          <p class="dur">0:33</p>
-          <h3>Pergunte ao Davi</h3>
-          <p>Ficou com dúvida? O Davi, a IA do RCO Dash, explica com exemplo e indica a aula certa.</p>
-        </div>
+        <div class="info"><p class="row"><span class="dur">0:33</span></p><h3>Pergunte ao Davi</h3></div>
       </article>
-      </div>
-    </section>
-    <section class="grp">
-      <header><h2>Para quem não tem tempo</h2><p class="sub">A operação vem pronta e o aviso chega no WhatsApp.</p></header>
-      <div class="grid">
-      <article class="card">
+      <article class="card mini">
         <video controls playsinline preload="none" poster="posters/04-research.jpg" src="videos/04-research.mp4" aria-label="Operação pronta para copiar"></video>
-        <div class="info">
-          <p class="dur">0:34</p>
-          <h3>Operação pronta para copiar</h3>
-          <p>Os analistas certificados da Research RCO publicam a operação. Você copia a ordem e envia na sua corretora.</p>
-        </div>
+        <div class="info"><p class="row"><span class="dur">0:34</span></p><h3>Operação pronta para copiar</h3></div>
       </article>
-      <article class="card">
-        <video controls playsinline preload="none" poster="posters/06-saidas.jpg" src="videos/06-saidas.mp4" aria-label="O aviso de saída no seu WhatsApp"></video>
-        <div class="info">
-          <p class="dur">0:34</p>
-          <h3>O aviso de saída no seu WhatsApp</h3>
-          <p>Entrou numa operação? A plataforma avisa no WhatsApp quando é hora de sair.</p>
-        </div>
+      <article class="card mini">
+        <video controls playsinline preload="none" poster="posters/06-saidas.jpg" src="videos/06-saidas.mp4" aria-label="O aviso de saída no WhatsApp"></video>
+        <div class="info"><p class="row"><span class="dur">0:34</span></p><h3>O aviso de saída no WhatsApp</h3></div>
       </article>
-      </div>
-    </section>
-    <section class="grp">
-      <header><h2>Para quem já opera</h2><p class="sub">Ferramentas de mesa profissional.</p></header>
-      <div class="grid">
-      <article class="card">
+      <article class="card mini">
         <video controls playsinline preload="none" poster="posters/05-trava-de-alta.jpg" src="videos/05-trava-de-alta.mp4" aria-label="Uma trava de alta em dois cliques"></video>
-        <div class="info">
-          <p class="dur">0:36</p>
-          <h3>Uma trava de alta em dois cliques</h3>
-          <p>Para quando você acha que a ação vai subir, sabendo antes o máximo que pode ganhar e perder.</p>
-        </div>
+        <div class="info"><p class="row"><span class="dur">0:36</span></p><h3>Uma trava de alta em dois cliques</h3></div>
       </article>
-      <article class="card">
+      <article class="card mini">
         <video controls playsinline preload="none" poster="posters/07-mercado.jpg" src="videos/07-mercado.mp4" aria-label="A rotina antes da bolsa abrir"></video>
-        <div class="info">
-          <p class="dur">0:31</p>
-          <h3>A rotina antes da bolsa abrir</h3>
-          <p>O que olhar no Mercado antes da abertura, em cinco telas.</p>
-        </div>
+        <div class="info"><p class="row"><span class="dur">0:31</span></p><h3>A rotina antes da bolsa abrir</h3></div>
       </article>
-      <article class="card">
-        <video controls playsinline preload="none" poster="posters/08-davi-carteira.jpg" src="videos/08-davi-carteira.mp4" aria-label="Três perguntas ao Davi sobre a carteira"></video>
-        <div class="info">
-          <p class="dur">0:35</p>
-          <h3>Três perguntas ao Davi sobre a carteira</h3>
-          <p>Perguntas de verdade, do iniciante ao avançado. Ele responde com números, olhando a sua carteira.</p>
-        </div>
+      <article class="card mini">
+        <video controls playsinline preload="none" poster="posters/08-davi-carteira.jpg" src="videos/08-davi-carteira.mp4" aria-label="Três perguntas ao Davi"></video>
+        <div class="info"><p class="row"><span class="dur">0:35</span></p><h3>Três perguntas ao Davi</h3></div>
       </article>
-      </div>
-    </section>
-    <section class="grp">
-      <header><h2>Em qualquer lugar</h2></header>
-      <div class="grid">
-      <article class="card">
+      <article class="card mini">
         <video controls playsinline preload="none" poster="posters/09-celular.jpg" src="videos/09-celular.mp4" aria-label="Funciona no celular"></video>
-        <div class="info">
-          <p class="dur">0:28</p>
-          <h3>Funciona no celular</h3>
-          <p>Tudo isso no celular, do mesmo jeito que no computador.</p>
-        </div>
+        <div class="info"><p class="row"><span class="dur">0:28</span></p><h3>Funciona no celular</h3></div>
       </article>
-      </div>
-    </section>
+    </div>
+  </section>
   <aside class="cta">
-    <p>Quer usar tudo isso?<small>Plataforma com IA, Research e o curso completo, em um lugar só.</small></p>
+    <p>Ainda não usa o RCO Dash?<small>Plataforma com IA, Research e o curso completo, em um lugar só.</small></p>
     <a class="btn" href="https://rcodash.com.br" target="_blank" rel="noopener">Conhecer o RCO Dash</a>
   </aside>
-  <p class="fine">Conteúdo educativo. O Davi é uma inteligência artificial e pode cometer erros; confira antes de operar. As operações da Research RCO são recomendações gerais de analistas certificados (CNPI), não personalizadas; quem executa é você, na sua corretora. Investimentos envolvem riscos e rentabilidade passada não garante resultado futuro.</p>
+  <p class="fine">Conteúdo educativo. Telas com dados de exemplo. O Davi é uma inteligência artificial e pode cometer erros; confira antes de operar. As recomendações da Research RCO são gerais, de analistas certificados (CNPI), e o acesso depende do seu plano. O RCO Dash não envia ordens: quem executa é você, na sua corretora. Investimentos envolvem riscos e rentabilidade passada não garante resultado futuro.</p>
 </main>
 </body>
 </html>
